@@ -44,6 +44,8 @@
       text-align: center;
       padding: 5px;
       cursor: pointer;
+      border: none;
+      outline: none;
 
       &:first-child {
         flex-basis: 30%;
@@ -61,7 +63,7 @@
           border-right: 6px solid transparent;
           border-top: 10px solid $color-purple;
         }
-
+  
       }
 
       &:nth-child(2) {
@@ -110,11 +112,20 @@
       flex-direction: column;
     }
 
+    &__item {
+      &:nth-child(2) {
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+      }
+
+    }
+
     &__main {
       display: flex;
       justify-content: space-between;
-      margin-top: 12px;
-      margin-bottom: 20px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+
     }
 
     &__wrapper {
@@ -132,30 +143,22 @@
       cursor: pointer;
       border: 5px double #eee;
     }
-    &__title{
+
+    &__title {
       font-size: 15px;
       color: $color-blue;
     }
-    &__text{
+
+    &__text {
       font-size: 13px;
     }
   }
 
+  .hide {
+    display: none;
+  }
 
-}
-
-
-
-
-
-
-
-
-
-.hide {
-  display: none;
-}
-
-.show {
-  display: block;
+  .show {
+    display: block;
+  }
 }

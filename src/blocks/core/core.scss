@@ -1,6 +1,11 @@
 .core {
+  &__header {
+    position: relative;
+  }
+
   &__title {
-    font-size: 35px;
+    // font-size: 35px;
+    font-size: 2rem;
   }
 
   &__text {
@@ -56,36 +61,43 @@
     }
   }
 
+  .hide {
+    display: none;
+  }
 
+  .show {
+    display: block;
+  }
 
+  .date {
+    position: absolute;
+    top: 8px;
+    left: -77px;
+    text-align: center;
+
+    &-day {
+      font-size: 35px;
+      font-weight: bold;
+      color: #fff;
+      background: $color-orange;
+      width: 67px;
+    }
+
+    &-month {
+      font-size: 19px;
+      color: #fff;
+      background: $color-blue;
+      text-transform: uppercase;
+    }
+  }
 }
 
-// .core__main img {
-//   display: block;
-//   width: 50%;
-// }
-
-
-// .img-item {
-//   cursor: pointer;
-
-
-// }
-
-// .img-list__content {
-//   display: flex;
-//   flex-direction: column;
-// }
-
-// .img-item__content {
-//   flex-basis: 100%;
-//   padding: 20px;
-// }
-
-.hide {
-  display: none;
-}
-
-.show {
-  display: block;
+@media screen and (max-width: 600px) {
+  .core__title {
+    padding-left: 40px;
+    font-size: 2rem;
+  }
+  .core .date {
+    left: -37px;
+  }
 }

@@ -1,0 +1,21 @@
+@media screen and (max-width: 1000px) {
+  .container{
+    margin: 0 5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    flex-direction: column;    
+     
+  }
+}
+@media screen and (max-width: 600px) {
+  .container{
+    margin: 0 0%;
+    &::before,
+    &::after{
+      display: none;
+    }
+  }
+}
