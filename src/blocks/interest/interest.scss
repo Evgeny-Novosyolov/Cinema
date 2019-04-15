@@ -42,66 +42,28 @@
       color: #fff;
       font-weight: 700;
       text-align: center;
-      padding: 5px;
       cursor: pointer;
       border: none;
       outline: none;
 
       &:first-child {
         flex-basis: 30%;
-        background: $color-purple;
-        position: relative;
-
-        &:focus::after {
-          position: absolute;
-          content: "";
-          width: 0;
-          height: 0;
-          left: 45%;
-          bottom: -10px;
-          border-left: 6px solid transparent;
-          border-right: 6px solid transparent;
-          border-top: 10px solid $color-purple;
-        }
-  
+        // background: $color-purple;
+        // position: relative;
       }
 
       &:nth-child(2) {
         margin-right: auto;
         flex-basis: 30%;
-        background: $color-orange;
-        position: relative;
-
-        &:focus::after {
-          position: absolute;
-          content: "";
-          width: 0;
-          height: 0;
-          left: 45%;
-          bottom: -10px;
-          border-left: 6px solid transparent;
-          border-right: 6px solid transparent;
-          border-top: 10px solid $color-orange;
-        }
+        // background: $color-orange;
+        // position: relative;
       }
 
       &:last-child {
         margin-right: auto;
         flex-grow: 1;
-        background: $color-blue;
-        position: relative;
-
-        &:focus::after {
-          position: absolute;
-          content: "";
-          width: 0;
-          height: 0;
-          left: 45%;
-          bottom: -10px;
-          border-left: 6px solid transparent;
-          border-right: 6px solid transparent;
-          border-top: 10px solid $color-blue;
-        }
+        // background: $color-blue;
+        // position: relative;
       }
     }
   }
@@ -160,5 +122,80 @@
 
   .show {
     display: block;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  label {
+    padding: 5px 0px;
+    &[for="radio_1"] {
+      // padding: 10px 30px;
+      display: block;
+      width: 100%;
+      background: $color-purple;
+      position: relative;
+    }
+    &[for="radio_2"] {
+      // padding: 10px 30px;
+      width: 100%;
+      background: $color-orange;
+      position: relative;
+      display: block;
+    }
+    &[for="radio_3"] {
+      // padding: 10px 30px;
+      width: 100%;
+      background: $color-blue;
+      position: relative;
+      display: block;
+    }
+  }
+  .trigger {
+    cursor: pointer;
+
+  }
+
+  .radio:checked+.trigger {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      left: 45%;
+      bottom: -10px;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 10px solid $color-purple;
+    }
+  }
+
+  .radio1:checked+.trigger {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      left: 45%;
+      bottom: -10px;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 10px solid $color-orange;
+    }
+  }
+
+  .radio2:checked+.trigger {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      left: 45%;
+      bottom: -10px;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 10px solid $color-blue;
+    }
   }
 }

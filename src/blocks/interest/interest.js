@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
-  let tab = document.querySelectorAll('.tab-item'),
+  let tab = document.querySelectorAll('.trigger'),
     nav = document.querySelector('.tab-list'),
     tabContent = document.querySelectorAll('.interest-box');
 
@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', function () {
   }
   nav.addEventListener('click', function (event) {
     let target = event.target;
-    if (target && target.classList.contains('tab-item')) {
+    if (target && target.classList.contains('trigger')) {
       for (let i = 0; i < tab.length; i++) {
         if (target == tab[i]) {
           hideTabContent(0);
